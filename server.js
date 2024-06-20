@@ -7,7 +7,10 @@ const cors = require('cors');
 
 connectDb();
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://react-redux-contactlist.vercel.app',
+    optionsSuccessStatus: 200
+}));
 
 const port = process.env.PORT || 5000;
 
